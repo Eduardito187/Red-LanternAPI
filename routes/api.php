@@ -19,9 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+/*
 Route::middleware([MiddlewareCustom::class])->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+});
+*/
+Route::get('/', function () {
+    return view('welcome');
 });
