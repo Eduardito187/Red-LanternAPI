@@ -5,7 +5,7 @@
         <h2 style="color: #555;">Project Vision:</h2>
         <p style="color: #666; line-height: 1.6;">Our vision is to create an intuitive and versatile mobile application that becomes the preferred tool for task management and time optimization on mobile devices. We aim to provide users with a solution that streamlines how they approach their daily responsibilities and promotes a higher level of efficiency in both their personal and professional lives.</p>
         <h2 style="color: #555;">Project Objectives:</h2>
-        <ul style="color: #666; line-height: 1.6; list-style-type: disc; margin-left: 20px;">
+        <ul align="left" style="color: #666; line-height: 1.6; list-style-type: disc; margin-left: 20px;">
             <li>Develop a mobile application for iOS and Android devices.</li>
             <li>Provide a user-friendly and visually appealing user interface.</li>
             <li>Integrate task management, reminders, and progress tracking features.</li>
@@ -18,7 +18,7 @@
         <h2 style="color: #555;">Project Scope:</h2>
         <p style="color: #666; line-height: 1.6;">The project scope spans from the initial conception and design of the application to its development, testing, launch on app stores, and the initial promotion phase. The application will include essential task management features but is planned for expansion with future updates to include advanced functionalities such as team collaboration and cross-platform synchronization.</p>
         <h2 style="color: #555;">Project Team:</h2>
-        <ul style="color: #666; line-height: 1.6; list-style-type: disc; margin-left: 20px;">
+        <ul align="left" style="color: #666; line-height: 1.6; list-style-type: disc; margin-left: 20px;">
             <li>CEO: Eduard Huallata</li>
             <li>Project Manager: Carlos Rosales</li>
             <li>Mobile App Development Team (Designers, Developers, Testers).</li>
