@@ -1,4 +1,4 @@
-<div  align="center" style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+<div  align="left" style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
         <h1 style="color: #333; text-align: center;">Project Title: Mobile App for Task Management and Productivity</h1>
         <h2 style="color: #555;">Project Description:</h2>
         <p style="color: #666; line-height: 1.6;">The Mobile App for Task Management and Productivity project is an initiative led by CEO Eduard Huallata and managed by Carlos Rosales, the Project Manager. The primary objective of this project is to develop an innovative mobile application that enables users to enhance their organization, increase productivity, and simplify the management of their daily tasks.</p>
