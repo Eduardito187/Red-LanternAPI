@@ -21,4 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::middleware([MiddlewareCustom::class])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });
