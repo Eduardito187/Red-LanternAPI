@@ -28,7 +28,7 @@
         <p style="color: #666; line-height: 1.6;">The project will be carried out over a period of 12 months, with significant milestones along the way, including UI design, app development, beta testing, and the official launch.</p>
         <p style="color: #666; line-height: 1.6;">The success of this project will be measured not only by the quality of the mobile application but also by user satisfaction and the acquisition of a solid base of active users. We are excited about the potential of this app to make people's lives more organized and productive and look forward to executing this project successfully under the leadership of Eduard Huallata and the management of Carlos Rosales.</p>
 </div>
-
+<br>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
