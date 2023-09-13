@@ -33,8 +33,14 @@ class Text{
     const AUTHORIZATION = "Authorization";
     const ERROR_402 = 402;
     const ERROR_404 = 404;
+    const ERROR_400 = 400;
+    const ERROR_401 = 401;
+    const ERROR_403 = 403;
+    const ERROR_500 = 500;
+    const TOKEN_PROHIBITED = "Access prohibited";
     const TOKEN_DECLINE = "TOKEN decline.";
     const ACCESS_DECLINE = "Access decline.";
+    const ACCESS_UNAUTHORIZED = "Unauthorized access.";
 
     public function __construct() {
         //

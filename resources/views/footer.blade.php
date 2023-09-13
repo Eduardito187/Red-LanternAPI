@@ -1,0 +1,2 @@
+    <!-- <script src="{{ asset('js/common.js') }}"></script> -->
+</html>

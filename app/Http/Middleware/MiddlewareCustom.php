@@ -57,10 +57,10 @@ class MiddlewareCustom{
             if ($this->tokenAccess->validateToken() == $this->status->getEnable()) {
                 return $next($request);
             }else{
-                return abort($this->text::ERROR_402, $this->text::TOKEN_DECLINE);
+                return abort($this->text::ERROR_403, $this->text::TOKEN_PROHIBITED);
             }
         }else{
-            return abort($this->text::ERROR_404, $this->text::ACCESS_DECLINE);
+            return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);
         }
     }
 }

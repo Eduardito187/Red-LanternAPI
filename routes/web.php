@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\MiddlewareCustom;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::middleware([MiddlewareCustom::class])->group(function () {
+    Route::get('/', function () {
+        return view('errors/401');
+    });
 });

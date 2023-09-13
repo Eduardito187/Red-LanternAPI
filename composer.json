@@ -9,7 +9,8 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "oyejorge/less.php": "v1.7.0.14"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -45,6 +46,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "compile-less": [
+            "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/errors.css', (new Less_Parser())->parseFile('resources/assets/less/errors.less')->getCss());\""
         ]
     },
     "extra": {
