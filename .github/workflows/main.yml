@@ -14,25 +14,25 @@ jobs:
 
     steps:
     - name: Run Laravel Migrate
-      run: php artisan migrate --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan migrate --force
 
     - name: Laravel clear cache config
-      run: php artisan config:clear --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan config:clear --force
       
     - name: Laravel clear cache view
-      run: php artisan view:clear --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan view:clear --force
 
     - name: Laravel clear cache route
-      run: php artisan route:clear --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan route:clear --force
       
     - name: Laravel clear cache compile
-      run: php artisan clear-compiled --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan clear-compiled --force
 
     - name: Laravel clear cache client
-      run: php artisan cache:clear --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan cache:clear --force
 
     - name: Laravel optimize
-      run: php artisan optimize --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan optimize --force
 
     - name: Laravel clear cache session
-      run: php artisan session:clear --force
+      run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan session:clear --force
