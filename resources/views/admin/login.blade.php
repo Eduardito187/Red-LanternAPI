@@ -27,5 +27,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('public/js/login.js') }}"></script>
+    <script src="{{ asset(env('PUBLIC_PATH').'js/login.js') }}"></script>
 @endsection

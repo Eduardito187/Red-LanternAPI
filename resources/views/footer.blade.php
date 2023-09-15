@@ -1,3 +1,3 @@
-    <!-- <script src="{{ asset('public/js/common.js') }}"></script> -->
+    <!-- <script src="{{ asset(env('PUBLIC_PATH').'js/common.js') }}"></script> -->
     @yield('scripts')
 </html>

@@ -5,7 +5,7 @@
 @section('content')
     <body class="body-error">
         <div class="container-error">
-            <img src="{{ asset('public/image/logo.png') }}" class="image-error" alt="Error 401" />
+            <img src="{{ asset(env('PUBLIC_PATH').'image/logo.png') }}" class="image-error" alt="Error 401" />
             <h1>Error 401 - No autorizado</h1>
             <?php
             $environment = config('app.env');
