@@ -3,10 +3,11 @@
 @section('title', 'Login|RedLantern')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset(env('PUBLIC_PATH').'css/login.css') }}">
 @endsection
 
 @section('content')
-    <body>
+    <body class="body-login">
         <div class="container">
             <h1>Iniciar Sesión</h1>
             <form id="login-form">

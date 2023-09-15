@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::middleware([MiddlewareCustom::class])->group(function () {
     Route::get('/', function () {
         return view('errors/401');
     });
 });
-
-Route::get('/Admin', function () {
+*/
+Route::get('/', function () {
     return view('admin/login');
 });
