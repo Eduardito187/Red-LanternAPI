@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Customer\CustomerControllers;
+use App\Http\Controllers\Login\LoginControllers;
 use App\Http\Middleware\MiddlewareCustom;
+use App\Http\Middleware\MiddlewareLogin;
+use App\Http\Middleware\MiddlewareNoLogin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +18,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /*
-Route::middleware([MiddlewareCustom::class])->group(function () {
+Route::middleware([MiddlewareLogin::class])->group(function () {
     Route::get('/', function () {
         return view('errors/401');
     });
 });
 */
 Route::get('/', function () {
-    return view('admin/login');
+    echo session("token_session");
+    //return view('admin/login');
+});
+
+
+Route::middleware([MiddlewareLogin::class])->group(function () {
+    Route::get('/Home', [CustomerControllers::class, 'Home'])->name('Home');
+});
+
+Route::middleware([MiddlewareNoLogin::class])->group(function () {
+    Route::get('/Login', [LoginControllers::class, 'LoginIndex'])->name('Login');
+    Route::get('/login', [LoginControllers::class, 'LoginIndex'])->name('login');
+    Route::post('/ValidateLogin', [LoginControllers::class, 'Login'])->name('ValidateLogin');
 });

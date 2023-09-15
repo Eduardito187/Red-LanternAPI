@@ -29,5 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si la autenticación es exitosa, puedes redirigir al usuario a otra página
             alert("Inicio de sesión exitoso");
         }
+        return true;
     });
 });
