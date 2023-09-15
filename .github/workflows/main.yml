@@ -15,8 +15,6 @@ jobs:
       - macos-latest
 
     steps:
-    - name: Install Composer dependencies
-      run: composer2 install
 
     - name: Run Laravel Migrate
       run: php artisan migrate
