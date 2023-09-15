@@ -13,7 +13,7 @@ jobs:
       - ubuntu-latest
 
     steps:
-    - run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan migrate --force
+    - run: php artisan migrate --force
 
     - name: Laravel clear cache config
       run: /usr/bin/php /home/u960392013/public_html/RedLanternApi/artisan config:clear --force
