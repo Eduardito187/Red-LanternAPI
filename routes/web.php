@@ -19,3 +19,7 @@ Route::middleware([MiddlewareCustom::class])->group(function () {
         return view('errors/401');
     });
 });
+
+Route::get('/Admin', function () {
+    return view('admin/login');
+});
