@@ -19,7 +19,7 @@ class Customer{
     public function isLogin(){
         if (session(self::TOKEN_SESSION)) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }

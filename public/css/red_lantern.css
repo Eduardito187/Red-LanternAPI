@@ -1,0 +1,122 @@
+.header-red-lantern {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0px 0px gray, 0px 5px 0.4em gray;
+}
+.red-lantern-header {
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .red-lantern-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .red-lantern-header {
+    align-items: center;
+  }
+}
+.red-lantern-header .logo img {
+  width: 100px;
+  height: auto;
+}
+.red-lantern-header .btn-mobile-action {
+  margin-left: auto;
+  float: right;
+  width: auto;
+  margin-top: -25px;
+}
+@media (max-width: 767px) {
+  .red-lantern-header .btn-mobile-action {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .red-lantern-header .btn-mobile-action {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .red-lantern-header .red-lantern-nav {
+    margin-top: 10px;
+    display: none !important;
+  }
+}
+.red-lantern-header .red-lantern-nav .menu {
+  list-style: none;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.red-lantern-header .red-lantern-nav .menu li {
+  margin-right: 20px;
+  position: relative;
+}
+.red-lantern-header .red-lantern-nav .menu li a {
+  background-color: #ffffff;
+  color: #f988ff;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.red-lantern-header .red-lantern-nav .menu li a:hover {
+  background-color: #f988ff;
+  color: #ffffff;
+}
+.red-lantern-header .red-lantern-nav .menu li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 25px 10px;
+  min-width: 150px;
+  width: auto;
+}
+.red-lantern-header .red-lantern-nav .menu li .submenu .options {
+  margin: 0px;
+  height: 45px;
+  list-style: none !important;
+}
+.red-lantern-header .red-lantern-nav .menu li .submenu .options .option {
+  min-width: 150px;
+  width: auto;
+}
+.red-lantern-header .red-lantern-nav .menu .dropdown:hover .submenu {
+  display: block;
+  z-index: 100;
+}
+.red-lantern-header .cta-buttons {
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .red-lantern-header .cta-buttons {
+    margin-top: 10px;
+    display: none !important;
+  }
+}
+.red-lantern-header .cta-buttons .cta-button {
+  background-color: #ffffff;
+  color: #f988ff;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px;
+}
+.red-lantern-header .cta-buttons .cta-button:hover {
+  background-color: #f988ff;
+  color: #ffffff;
+}

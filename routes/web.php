@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\Customer\CustomerControllers;
 use App\Http\Controllers\Login\LoginControllers;
-use App\Http\Middleware\MiddlewareCustom;
+use App\Http\Controllers\Visitor\VisitorControllers;
+use App\Http\Middleware\MiddlewareVisitor;
 use App\Http\Middleware\MiddlewareLogin;
 use App\Http\Middleware\MiddlewareNoLogin;
 use Illuminate\Support\Facades\Route;
@@ -24,11 +25,13 @@ Route::middleware([MiddlewareLogin::class])->group(function () {
     });
 });
 */
-Route::get('/', function () {
-    echo session("token_session");
-    //return view('admin/login');
-});
 
+Route::middleware([MiddlewareVisitor::class])->group(function () {
+    Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
+    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
+    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
+    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
+});
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
     Route::get('/Home', [CustomerControllers::class, 'Home'])->name('Home');

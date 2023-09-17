@@ -66,6 +66,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'custom_token' => \App\Http\Middleware\MiddlewareCustom::class,
         'login_validation' => \App\Http\Middleware\MiddlewareLogin::class,
-        'no_login_validation' => \App\Http\Middleware\MiddlewareNoLogin::class
+        'no_login_validation' => \App\Http\Middleware\MiddlewareNoLogin::class,
+        'visitor_validation' => \App\Http\Middleware\MiddlewareVisitor::class
     ];
 }

@@ -41,6 +41,8 @@ class Text{
     const TOKEN_DECLINE = "TOKEN decline.";
     const ACCESS_DECLINE = "Access decline.";
     const ACCESS_UNAUTHORIZED = "Unauthorized access.";
+    const STATUS = "status";
+    const CODE = "code";
 
     public function __construct() {
         //

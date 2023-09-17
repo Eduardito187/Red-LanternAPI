@@ -49,7 +49,9 @@
         ],
         "compile-less": [
             "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/errors.css', (new Less_Parser())->parseFile('resources/assets/less/errors.less')->getCss());\"",
-            "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/login.css', (new Less_Parser())->parseFile('resources/assets/less/login.less')->getCss());\""
+            "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/login.css', (new Less_Parser())->parseFile('resources/assets/less/login.less')->getCss());\"",
+            "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/red_lantern.css', (new Less_Parser())->parseFile('resources/assets/less/red_lantern.less')->getCss());\"",
+            "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/all.css', (new Less_Parser())->parseFile('resources/assets/less/all.less')->getCss());\""
         ]
     },
     "extra": {

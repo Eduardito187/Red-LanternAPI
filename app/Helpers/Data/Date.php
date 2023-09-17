@@ -34,7 +34,7 @@ class Date{
             return $this->getDiferenceCreated($Year, $Month, $Days);
         }else if($status === false) {
             return $this->getDiferenceUpdated($Year, $Month, $Days);
-        }else{
+        }else {
             $Hours = $this->getDiferenceHours($date, $date_);
             $Minutes = $this->getDiferenceMinutes($date, $date_);
             return $this->getDiferenceUpdatedInit($Year, $Month, $Days, $Hours, $Minutes);
@@ -55,7 +55,7 @@ class Date{
         }else {
             if ($Days > 0) {
                 return $this->Text->getDiferenceDays($this->Text::CREADO, $Days);
-            }else{
+            }else {
                 return $this->Text::CREADO_NOW;
             }
         }
@@ -75,7 +75,7 @@ class Date{
         }else {
             if ($Days > 0) {
                 return $this->Text->getDiferenceDays($this->Text::MODIFICADO, $Days);
-            }else{
+            }else {
                 return $this->Text::MODIFICADO_NOW;
             }
         }
@@ -97,10 +97,10 @@ class Date{
         }else {
             if ($Days > 0) {
                 return $this->Text->concatTwoString($Days, $this->Text::DAY_PHP);
-            }else{
+            }else {
                 if ($Hours > 0) {
                     return $this->Text->concatTwoString($Hours, $this->Text::HOURS_PHP);
-                }else{
+                }else {
                     return $this->Text->concatTwoString($Minutes, $this->Text::MINUTES_PHP);
                 }
             }

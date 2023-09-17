@@ -56,9 +56,15 @@ class MiddlewareNoLogin{
         //Registra u valida la Ip del cliente
         $this->ipLocker->validateIp();
 
-        if ($this->ipLocker->validRestrict() && $this->customer->isLogin() === false) {
+        // Validacion de Ip
+        if ($this->ipLocker->validRestrict() == $this->status->getDisable()) {
+            return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);
+        }
+
+        // Validacion de login
+        if ($this->customer->isLogin() === false) {
             return $next($request);
-        }else{
+        }else {
             return redirect()->route("Home");
         }
     }

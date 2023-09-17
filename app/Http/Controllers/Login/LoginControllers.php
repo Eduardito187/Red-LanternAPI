@@ -36,7 +36,7 @@ class LoginControllers extends Controller
         if (isset($params["username"]) && isset($params["password"])){
             $this->customer->initLogin("__TOKEN__");
             return redirect()->route("Home");
-        }else{
+        }else {
             return redirect()->route("Login");
         }
     }

@@ -26,7 +26,7 @@ class TokenAccess{
         $validateAccount = ModelAccount::select($this->Text::ID)->where($this->Text::TOKEN, $this->getToken())->get()->toArray();
         if (count($validateAccount) == 0) {
             return false;
-        }else{
+        }else {
             return true;
         }
     }
@@ -38,7 +38,7 @@ class TokenAccess{
         $Token = explode($this->Text::SPACE, $this->Token);
         if (count($Token) == 2) {
             return $Token[1];
-        }else{
+        }else {
             return null;
         }
     }

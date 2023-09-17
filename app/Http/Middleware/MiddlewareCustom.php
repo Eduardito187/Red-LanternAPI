@@ -51,15 +51,15 @@ class MiddlewareCustom{
         $this->ipLocker->validateIp();
 
         $headerAutorization = $request->header($this->text::AUTHORIZATION);
-        if ($this->ipLocker->validRestrict() && $headerAutorization != null) {
+        if ($this->ipLocker->validRestrict() == $this->status->getEnable() && $headerAutorization != null) {
             $this->tokenAccess->setToken($headerAutorization);
 
             if ($this->tokenAccess->validateToken() == $this->status->getEnable()) {
                 return $next($request);
-            }else{
+            }else {
                 return abort($this->text::ERROR_403, $this->text::TOKEN_PROHIBITED);
             }
-        }else{
+        }else {
             return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);
         }
     }

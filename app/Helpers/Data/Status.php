@@ -20,7 +20,7 @@ class Status{
     public function convertBool($value){
         if ($value == self::VALUE_DISABLE) {
             return self::BOOL_DISABLE;
-        }else{
+        }else {
             return self::BOOL_ENABLE;
         }
     }

@@ -1,0 +1,195 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.color-red-lantern {
+  color: #f988ff;
+}
+.icon-page-100 {
+  width: 100px;
+}
+.modal-login .modal-body .separation-content {
+  width: 100%;
+  display: flex;
+}
+.modal-login .modal-body .separation-content .separation-content-center {
+  width: 10%;
+  display: inline-block;
+  text-align: center;
+  margin: auto auto;
+  font-weight: 600;
+  color: #ccc;
+}
+.modal-login .modal-body .separation-content .separation-content-left {
+  width: 45%;
+  display: inline-block;
+  text-align: left;
+}
+.modal-login .modal-body .separation-content .separation-content-left hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.modal-login .modal-body .separation-content .separation-content-right {
+  width: 45%;
+  display: inline-block;
+  text-align: right;
+}
+.modal-login .modal-body .separation-content .separation-content-right hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.content-page {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+.content-page .content-centered {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.content-page .content-centered .options-centered {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 0.5rem 1rem rgba(22, 28, 45, 0.15);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 1rem;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .content-page .content-centered .options-centered {
+    width: 95%;
+  }
+}
+@media (min-width: 768px) {
+  .content-page .content-centered .options-centered {
+    width: 60%;
+  }
+}
+.content-page .content-centered .options-centered .icon-section {
+  font-size: 150px;
+  cursor: pointer;
+}
+.content-page .content-centered .options-centered .title-option {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.section-flex {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+}
+.section-flex .divider-tree {
+  width: 33%;
+  display: inline-block;
+}
+footer .icon-page {
+  width: 120px;
+}
+footer .icon-footer {
+  font-size: 80px;
+}
+.link-text {
+  color: #212529;
+  text-decoration: none;
+}
+.menu .section-max {
+  width: 100%;
+  height: 45px;
+}
+.menu .section-max .btn-action-login {
+  width: auto;
+  background-color: #f988ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.menu .section-max .btn-action-login:hover {
+  background-color: white;
+  color: #f988ff;
+  border: solid 2px #f988ff;
+}
+.menu .section-max-dropdown .collapsed-custom {
+  padding-left: 10px;
+  display: none;
+}
+.menu .section-max-dropdown .collapsed-custom .btn-action-login {
+  width: auto;
+  background-color: #f988ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.menu .section-max-dropdown .collapsed-custom .btn-action-login:hover {
+  background-color: white;
+  color: #f988ff;
+  border: solid 2px #f988ff;
+}
+.menu .section-max-dropdown:hover .collapsed-custom {
+  display: block;
+}
+.row-red-lanter {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.row-red-lanter .btn-action-login {
+  width: auto;
+  background-color: #f988ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.row-red-lanter .btn-action-login:hover {
+  background-color: white;
+  color: #f988ff;
+  border: solid 2px #f988ff;
+}
+.row-red-lanter .content-link {
+  overflow: hidden;
+}
+.row-red-lanter .content-link .card-img-category {
+  flex: 1;
+  max-width: none;
+  max-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-height: 260px;
+  max-height: 260px;
+  height: 260px;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader img {
+  width: 50px;
+  height: 50px;
+}
