@@ -9,7 +9,6 @@
 @section('content')
     <body>
         @include('visitor/header/header')
-        
 
         <div class="row-red-lanter">
                 <h2>Seguridad</h2>

@@ -31,6 +31,9 @@ Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
     Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
     Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
+    Route::get('/seguridad', [VisitorControllers::class, 'seguridad'])->name('seguridad');
+    Route::get('/privacidad', [VisitorControllers::class, 'privacidad'])->name('privacidad');
+    Route::get('/confidencialidad', [VisitorControllers::class, 'confidencialidad'])->name('confidencialidad');
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
