@@ -19,12 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad']);
-    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad']);
-    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad']);
 
 Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
+    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad']);
+    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad']);
+    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad']);
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
