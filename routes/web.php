@@ -19,18 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware([MiddlewareVisitor::class])->group(function () {
-    Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
-    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
-    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
-    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
-});
+Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
+Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
+Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
+Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
 
-Route::middleware([MiddlewareLogin::class])->group(function () {
-    Route::get('/Home', [CustomerControllers::class, 'Home'])->name('Home');
-});
+Route::get('/Home', [CustomerControllers::class, 'Home'])->name('Home');
 
-Route::middleware([MiddlewareNoLogin::class])->group(function () {
-    Route::get('/Login', [LoginControllers::class, 'LoginIndex'])->name('Login');
-    Route::post('/ValidateLogin', [LoginControllers::class, 'Login'])->name('ValidateLogin');
-});
+Route::get('/Login', [LoginControllers::class, 'LoginIndex'])->name('Login');
+Route::post('/ValidateLogin', [LoginControllers::class, 'Login'])->name('ValidateLogin');
