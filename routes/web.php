@@ -28,12 +28,9 @@ Route::middleware([MiddlewareLogin::class])->group(function () {
 
 Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
-    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
-    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
-    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
-    Route::get('/seguridad', [VisitorControllers::class, 'seguridad'])->name('seguridad');
-    Route::get('/privacidad', [VisitorControllers::class, 'privacidad'])->name('privacidad');
-    Route::get('/confidencialidad', [VisitorControllers::class, 'confidencialidad'])->name('confidencialidad');
+    Route::get('/{privacidad}', [VisitorControllers::class, 'Privacidad'])->where('privacidad', 'Privacidad|privacidad')->name('privacidad');
+    Route::get('/{confidencialidad}', [VisitorControllers::class, 'Confidencialidad'])->where('confidencialidad', 'Confidencialidad|confidencialidad')->name('confidencialidad');
+    Route::get('/{seguridad}', [VisitorControllers::class, 'Seguridad'])->where('seguridad', 'Seguridad|seguridad')->name('seguridad');
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
