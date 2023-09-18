@@ -23,9 +23,8 @@
                 <button type="submit">Iniciar Sesión</button>
             </form>
         </div>
+        <div class="loader">
+            <img src="{{ asset(env('PUBLIC_PATH').'image/loader.gif') }}" alt="Cargando...">
+        </div>
     </body>
-@endsection
-
-@section('scripts')
-    <script src="{{ asset(env('PUBLIC_PATH').'js/login.js') }}"></script>
 @endsection
