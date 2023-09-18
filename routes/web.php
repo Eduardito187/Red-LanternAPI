@@ -31,6 +31,6 @@ Route::middleware([MiddlewareLogin::class])->group(function () {
 });
 
 Route::middleware([MiddlewareNoLogin::class])->group(function () {
-    Route::get('/{login}', [LoginControllers::class, 'LoginIndex'])->where('login', 'Login|login')->name('login');
+    Route::get('/Login', [LoginControllers::class, 'LoginIndex'])->name('Login');
     Route::post('/ValidateLogin', [LoginControllers::class, 'Login'])->name('ValidateLogin');
 });
