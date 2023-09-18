@@ -62,6 +62,5 @@ class MiddlewareVisitor{
             return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);
         }
         
-        return $next($request);
     }
 }
