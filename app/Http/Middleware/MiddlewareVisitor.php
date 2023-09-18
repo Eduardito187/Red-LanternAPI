@@ -56,11 +56,12 @@ class MiddlewareVisitor{
         //Registra u valida la Ip del cliente
         $this->ipLocker->validateIp();
 
+        \Illuminate\Support\Facades\Log::info($this->ipLocker->validRestrict() ? "SI" : "NO");
         // Validacion de Ip
-        if ($this->ipLocker->validRestrict() == $this->status->getDisable()) {
+        if ($this->ipLocker->validRestrict() === $this->status->getDisable()) {
             return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);
-        }else {
-            return $next($request);
         }
+        
+        return $next($request);
     }
 }

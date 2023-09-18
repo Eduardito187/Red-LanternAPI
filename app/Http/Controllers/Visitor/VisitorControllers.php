@@ -56,7 +56,7 @@ class VisitorControllers extends Controller
     */
     public function Privacidad(Request $request)
     {
-        return view('visitor/index');
+        return view('visitor/privacidad');
     }
 
     /**
