@@ -13,6 +13,7 @@ class VisitorControllers extends Controller
      * @var Services
      */
     protected $services;
+    
     /**
      * @var Status
      */
