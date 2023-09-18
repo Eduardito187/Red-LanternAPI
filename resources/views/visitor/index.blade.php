@@ -40,36 +40,36 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="row">
-                                    <a href="{{ route('seguridad') }}" class="link-text">
+                                    <a href="{{ route('/Seguridad') }}" class="link-text">
                                         <i class="fa fa-lock color-red-lantern icon-section"></i>
                                     </a>
                                 </div>
                                 <div class="row">
-                                    <a href="{{ route('seguridad') }}" class="link-text">
+                                    <a href="{{ route('/Seguridad') }}" class="link-text">
                                         <span class="title-option">Seguridad</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <a href="{{ route('privacidad') }}" class="link-text">
+                                    <a href="{{ route('/Privacidad') }}" class="link-text">
                                         <i class="fa fa-user-secret color-red-lantern icon-section"></i>
                                     </a>
                                 </div>
                                 <div class="row">
-                                    <a href="{{ route('privacidad') }}" class="link-text">
+                                    <a href="{{ route('/Privacidad') }}" class="link-text">
                                         <span class="title-option">Privacidad</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <a href="{{ route('confidencialidad') }}" class="link-text">
+                                    <a href="{{ route('/Confidencialidad') }}" class="link-text">
                                         <i class="fa fa-shield color-red-lantern icon-section"></i>
                                     </a>
                                 </div>
                                 <div class="row">
-                                    <a href="{{ route('confidencialidad') }}" class="link-text">
+                                    <a href="{{ route('/Confidencialidad') }}" class="link-text">
                                         <span class="title-option">Confidencialidad</span>
                                     </a>
                                 </div>
