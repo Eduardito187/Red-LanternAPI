@@ -56,7 +56,8 @@
         "cache-clean": [
             "php artisan route:clear",
             "php artisan config:clear",
-            "php artisan config:cache"
+            "php artisan config:cache",
+            "php artisan optimize"
         ]
     },
     "extra": {
