@@ -54,10 +54,10 @@
             "php -r \"require 'vendor/autoload.php'; file_put_contents('public/css/all.css', (new Less_Parser())->parseFile('resources/assets/less/all.less')->getCss());\""
         ],
         "cache-clean": [
+            "php artisan optimize",
             "php artisan route:clear",
             "php artisan config:clear",
-            "php artisan config:cache",
-            "php artisan optimize"
+            "php artisan config:cache"
         ]
     },
     "extra": {
