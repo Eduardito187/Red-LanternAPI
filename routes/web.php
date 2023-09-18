@@ -18,13 +18,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-/*
-Route::middleware([MiddlewareLogin::class])->group(function () {
-    Route::get('/', function () {
-        return view('errors/401');
-    });
-});
-*/
 
 Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('privacidad');
 Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('confidencialidad');
