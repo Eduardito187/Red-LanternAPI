@@ -28,9 +28,9 @@ Route::middleware([MiddlewareLogin::class])->group(function () {
 
 Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/', [VisitorControllers::class, 'Index'])->name('Index');
-    Route::get('/{privacidad}', [VisitorControllers::class, 'Privacidad'])->where('privacidad', 'Privacidad|privacidad')->name('privacidad');
-    Route::get('/{confidencialidad}', [VisitorControllers::class, 'Confidencialidad'])->where('confidencialidad', 'Confidencialidad|confidencialidad')->name('confidencialidad');
-    Route::get('/{seguridad}', [VisitorControllers::class, 'Seguridad'])->where('seguridad', 'Seguridad|seguridad')->name('seguridad');
+    Route::get('/Privacidad', [VisitorControllers::class, 'Privacidad'])->name('privacidad');
+    Route::get('/Confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('confidencialidad');
+    Route::get('/Seguridad', [VisitorControllers::class, 'Seguridad'])->name('seguridad');
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
