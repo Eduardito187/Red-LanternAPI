@@ -13,7 +13,7 @@ class VisitorControllers extends Controller
      * @var Services
      */
     protected $services;
-    
+
     /**
      * @var Status
      */
@@ -56,7 +56,7 @@ class VisitorControllers extends Controller
     */
     public function Privacidad(Request $request)
     {
-        return view('visitor/privacidad');
+        return view('visitor.privacidad');
     }
 
     /**
