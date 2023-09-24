@@ -81,16 +81,17 @@
   background-color: transparent;
   color: #ffffff;
   padding: 25px 10px;
-  min-width: 150px;
+  min-width: 220px;
   width: auto;
 }
 .red-lantern-header .red-lantern-nav .menu li .submenu .options {
   margin: 0px;
   height: 45px;
   list-style: none !important;
+  margin-bottom: 2px;
 }
 .red-lantern-header .red-lantern-nav .menu li .submenu .options .option {
-  min-width: 150px;
+  min-width: 220px;
   width: auto;
 }
 .red-lantern-header .red-lantern-nav .menu .dropdown:hover .submenu {

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_error')
 
 @section('title', 'Error 400 - Solicitud incorrecta')
 

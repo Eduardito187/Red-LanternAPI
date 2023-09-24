@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_error')
 
 @section('title', 'Error 500 - Error interno del servidor')
 

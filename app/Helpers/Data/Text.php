@@ -42,6 +42,7 @@ class Text{
     const ACCESS_DECLINE = "Access decline.";
     const ACCESS_UNAUTHORIZED = "Unauthorized access.";
     const STATUS = "status";
+    const URL = "url";
     const CODE = "code";
 
     public function __construct() {

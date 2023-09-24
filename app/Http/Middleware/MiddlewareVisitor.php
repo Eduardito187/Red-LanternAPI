@@ -17,18 +17,22 @@ class MiddlewareVisitor{
      * @var Text
      */
     protected $text;
+
     /**
      * @var Status
      */
     protected $status;
+
     /**
      * @var IpLocker
      */
     protected $ipLocker;
+
     /**
      * @var TokenAccess
      */
     protected $tokenAccess;
+
     /**
      * @var Customer
      */
@@ -55,6 +59,8 @@ class MiddlewareVisitor{
         $this->ipLocker->setIp($request->ip());
         //Registra u valida la Ip del cliente
         $this->ipLocker->validateIp();
+
+        $this->customer->setStorePage();
 
         \Illuminate\Support\Facades\Log::info($this->ipLocker->validRestrict() ? "SI" : "NO");
         // Validacion de Ip

@@ -96,18 +96,18 @@
                                 @foreach($category as $cat)
                                     <div class="col">
                                         <div class="card">
-                                            <a href="{{ $cat->url; }}" class="link-text content-link">
+                                            <a href="/category/{{ $cat->url; }}" class="link-text content-link">
                                                 <img src="{{ asset(env('PUBLIC_PATH').$cat->Picture->url); }}" class="card-img-category">
                                             </a>
                                             <div class="card-body text-start">
-                                                <a href="{{ $cat->url; }}" class="link-text">
+                                                <a href="/category/{{ $cat->url; }}" class="link-text">
                                                     <h5 class="card-title">{{ $cat->name; }}</h5>
                                                 </a>
                                                 <div class="row">{!! $cat->content_html; !!}</div>
                                             </div>
                                             <div class="list-group text-start">
                                                 @foreach($cat->CityCategory as $cityCategory)
-                                                    <a href="{{ $cat->url.'?code='.$cityCategory->City->code; }}" class="list-group-item list-group-item-action">{{ $cityCategory->City->name; }}</a>
+                                                    <a href="/category/{{ $cat->url.'?_store='.$cityCategory->City->code; }}" class="list-group-item list-group-item-action">{{ $cityCategory->City->name; }}</a>
                                                 @endforeach
                                             </div>
                                         </div>

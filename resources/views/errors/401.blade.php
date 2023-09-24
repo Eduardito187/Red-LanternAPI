@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_error')
 
 @section('title', 'Error 401 - No autorizado')
 

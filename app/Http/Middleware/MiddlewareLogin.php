@@ -17,18 +17,22 @@ class MiddlewareLogin{
      * @var Text
      */
     protected $text;
+
     /**
      * @var Status
      */
     protected $status;
+
     /**
      * @var IpLocker
      */
     protected $ipLocker;
+
     /**
      * @var TokenAccess
      */
     protected $tokenAccess;
+
     /**
      * @var Customer
      */
@@ -55,6 +59,8 @@ class MiddlewareLogin{
         $this->ipLocker->setIp($request->ip());
         //Registra u valida la Ip del cliente
         $this->ipLocker->validateIp();
+
+        $this->customer->setStorePage();
 
         // Validacion de Ip
         if ($this->ipLocker->validRestrict() == $this->status->getDisable()) {

@@ -1,7 +1,12 @@
 
+<?php
+$category = App\Helpers\Scorts\Services::AllCategory();
+?>
 <header id="header-red-lantern" class="red-lantern-header">
     <div class="logo">
-        <img src="{{ asset(env('PUBLIC_PATH').'image/logo.png') }}" alt="Logo de la empresa">
+        <a href="/">
+            <img src="{{ asset(env('PUBLIC_PATH').'image/logo.png') }}" alt="Logo de la empresa">
+        </a>
     </div>
     <button type="button" class="btn btn-primary btn-mobile-action" data-bs-toggle="modal" data-bs-target="#loginModal">
         ☰
@@ -9,19 +14,23 @@
     <nav class="red-lantern-nav">
         <ul class="menu">
             <li>
-                <a href="#">Inicio</a>
+                <a href="/">Inicio</a>
             </li>
-            <li class="dropdown">
-                <a href="#">Opciones</a>
-                <ul class="submenu">
-                    <li class="options">
-                        <a class="option" href="#">Opción 1</a>
-                    </li>
-                    <li class="options">
-                        <a class="option" href="#">Opción 2</a>
-                    </li>
-                </ul>
+            <li>
+                <a href="/">Blog</a>
             </li>
+            <?php if (count($category) > 0) : ?>
+                <li class="dropdown">
+                    <a href="#">Categorías</a>
+                    <ul class="submenu">
+                        @foreach($category as $cat)
+                            <li class="options">
+                                <a class="option" href="/category/{{ $cat->url; }}">{{ $cat->name; }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+            <?php endif; ?>
         </ul>
     </nav>
     <div class="cta-buttons">

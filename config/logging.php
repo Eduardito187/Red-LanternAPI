@@ -54,6 +54,12 @@ return [
             'ignore_exceptions' => false,
         ],
 
+        'backup_db' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/backup_db.log'),
+            'level' => 'info',
+        ],
+        
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),

@@ -26,10 +26,29 @@ class Services{/**
     }
 
     /**
+     * @return Category|null
+     */
+    public function getByUrl(string $url){
+        $Category = Category::where($this->text::URL, $url)->first();
+        if (!$Category) {
+            return null;
+        }
+        return $Category;
+    }
+
+    /**
      * @return Category[]
      */
     public function getAllCategory(){
         return Category::where($this->text::STATUS, $this->status->getEnable())->get();
+    }
+    
+
+    /**
+     * @return Category[]
+     */
+    public static function AllCategory(){
+        return Category::where("status", true)->get();
     }
 
     /**

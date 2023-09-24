@@ -7,6 +7,7 @@ use App\Http\Middleware\MiddlewareVisitor;
 use App\Http\Middleware\MiddlewareLogin;
 use App\Http\Middleware\MiddlewareNoLogin;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Visitor\CategoryControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/privacidad', [VisitorControllers::class, 'Privacidad'])->name('Privacidad');
     Route::get('/confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
     Route::get('/seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
+    Route::get('/category/{url}', [CategoryControllers::class, 'CategoryUrl'])->name('Category');
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {

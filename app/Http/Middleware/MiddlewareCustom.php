@@ -10,30 +10,40 @@ use App\Helpers\Data\Status;
 use App\Helpers\Security\IpLocker;
 use \Illuminate\Http\Response;
 use \Illuminate\Http\RedirectResponse;
+use App\Helpers\Login\Customer;
 
 class MiddlewareCustom{
     /**
      * @var Text
      */
     protected $text;
+
     /**
      * @var Status
      */
     protected $status;
+
     /**
      * @var IpLocker
      */
     protected $ipLocker;
+
     /**
      * @var TokenAccess
      */
     protected $tokenAccess;
+
+    /**
+     * @var Customer
+     */
+    protected $customer;
 
     public function __construct() {
         $this->text = new Text();
         $this->status = new Status();
         $this->ipLocker = new IpLocker();
         $this->tokenAccess = new TokenAccess();
+        $this->customer = new Customer();
     }
 
     /**
@@ -49,6 +59,8 @@ class MiddlewareCustom{
         $this->ipLocker->setIp($request->ip());
         //Registra u valida la Ip del cliente
         $this->ipLocker->validateIp();
+
+        $this->customer->setStorePage();
 
         $headerAutorization = $request->header($this->text::AUTHORIZATION);
         if ($this->ipLocker->validRestrict() == $this->status->getEnable() && $headerAutorization != null) {
