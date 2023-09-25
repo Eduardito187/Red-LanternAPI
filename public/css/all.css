@@ -197,3 +197,221 @@ footer .icon-footer {
   width: 50px;
   height: 50px;
 }
+a,
+a:visited,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.main {
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9a39a3', endColorstr='#4167a8', GradientType=1);
+}
+.main .container {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  max-width: 840px;
+}
+.main .container .border-searching .border {
+  stroke-dasharray: 740;
+  stroke-dashoffset: 459;
+  transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.15, 0.205, 1);
+  -webkit-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.15, 0.205, 1);
+  -moz-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.15, 0.205, 1);
+  -o-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.15, 0.205, 1);
+}
+.main .container .search-box {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 60px;
+  border-radius: 120px;
+  margin-left: auto;
+}
+.main .container .search-box .search-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  width: 86px;
+  line-height: 61px;
+  text-align: center;
+}
+.main .container .search-box .go-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 60px;
+  width: 86px;
+  line-height: 61px;
+  text-align: center;
+}
+.main .container .search-box .search-icon {
+  left: 0;
+  pointer-events: none;
+  font-size: 1.22em;
+  will-change: transform;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -o-transform-origin: center center;
+  transition: transform 400ms 220ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: transform 400ms 220ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: transform 400ms 220ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: transform 400ms 220ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.main .container .search-box .si-rotate {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.main .container .search-box .go-icon {
+  right: 0;
+  pointer-events: none;
+  font-size: 1.38em;
+  will-change: opacity;
+  cursor: default;
+  opacity: 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.main .container .search-box .go-in {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.main .container .search-box .search-border {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: 60px;
+}
+.main .container .search-box .search-border .border {
+  fill: none;
+  stroke: #f988ff;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.main .container .search-box .search-border .border .border {
+  stroke-dasharray: 740;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 400ms cubic-bezier(0.6, 0.04, 0.735, 0.99);
+  -webkit-transition: stroke-dashoffset 400ms cubic-bezier(0.6, 0.04, 0.735, 0.99);
+  -moz-transition: stroke-dashoffset 400ms cubic-bezier(0.6, 0.04, 0.735, 0.99);
+  -o-transition: stroke-dashoffset 400ms cubic-bezier(0.6, 0.04, 0.735, 0.99);
+}
+.main .container .search-box #search {
+  font-family: 'Montserrat Alternates', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 120px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  padding: 0 68px 0 68px;
+  color: #f988ff;
+  font-size: 1.32em;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  outline: none;
+}
+.main .container .search-box #search::-webkit-input-placeholder {
+  color: #f988ff;
+}
+.main .container .search-box #search::-moz-placeholder {
+  color: #f988ff;
+}
+.main .container .search-box #search:-ms-input-placeholder {
+  color: #f988ff;
+}
+.main .container .search-box #search:-moz-placeholder {
+  color: #f988ff;
+}
+.main .container .search-box #search::-moz-selection {
+  color: #f988ff;
+  background: rgba(0, 0, 0, 0.25);
+}
+.main .container .search-box #search::selection {
+  color: #f988ff;
+  background: rgba(0, 0, 0, 0.25);
+}
+.row .pagination {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  backdrop-filter: blur(3px);
+  border-radius: 2px;
+}
+.row .pagination li {
+  list-style-type: none;
+  display: inline-block;
+}
+.row .pagination li a {
+  position: relative;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #f988ff;
+  font-weight: 500;
+}
+.row .pagination li a:hover {
+  background: #f988ff;
+  color: white;
+}
+.row .pagination li .active a {
+  background: #f988ff;
+  color: white;
+}
+.privileges-scorts {
+  height: 400px;
+  display: flex;
+  margin: 0;
+  background: linear-gradient(135deg, #295fd5, #9d8ce0);
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.privileges-scorts .group {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+}
+.privileges-scorts .item {
+  width: 15vw;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: width 2s ease, height 2s ease;
+  margin: 5px;
+  border-radius: 5px;
+}
+.privileges-scorts .item:hover {
+  width: 30vw;
+  height: 350px;
+}

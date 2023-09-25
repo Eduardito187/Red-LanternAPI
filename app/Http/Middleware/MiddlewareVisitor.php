@@ -62,7 +62,6 @@ class MiddlewareVisitor{
 
         $this->customer->setStorePage();
 
-        \Illuminate\Support\Facades\Log::info($this->ipLocker->validRestrict() ? "SI" : "NO");
         // Validacion de Ip
         if ($this->ipLocker->validRestrict() === $this->status->getDisable()) {
             return abort($this->text::ERROR_401, $this->text::ACCESS_UNAUTHORIZED);

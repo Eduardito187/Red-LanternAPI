@@ -19,14 +19,9 @@ class Sessions{
      */
     protected $date;
 
-    /**
-     * @var Session
-     */
-    protected $session;
-
     public function __construct()
     {
-        $this->session = new Session();
+        //
     }
 
     /**
@@ -36,7 +31,9 @@ class Sessions{
      */
     public function setVariableSesion($nombre, $valor)
     {
-        $this->session::put($nombre, $valor);
+        Session::put(
+            [$nombre => $valor]
+        );
     }
 
     /**
@@ -45,7 +42,7 @@ class Sessions{
      */
     public function deleteVariableSesion(string $nombre)
     {
-        $this->session::forget($nombre);
+        Session::forget($nombre);
     }
 
     /**
@@ -57,8 +54,8 @@ class Sessions{
         $value = null;
 
         try {
-            if ($this->session::has($nombre)) {
-                $value = $this->session::get($nombre);
+            if (Session::has($nombre)) {
+                $value = session($nombre);
             } else {
                 $value = null;
             }

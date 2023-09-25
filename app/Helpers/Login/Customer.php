@@ -16,6 +16,11 @@ class Customer{
      * @var string
      */
     const STORE_NAME = "store_name";
+    
+    /**
+     * @var string
+     */
+    const STORE_CODE = "store_code";
 
     /**
      * @var string
@@ -36,7 +41,7 @@ class Customer{
      */
     public function setStorePage(){
         if (isset($_GET["_store"])) {
-            $this->sessions->setVariableSesion(self::STORE_NAME, $_GET["_store"]);
+            $this->sessions->setVariableSesion(self::STORE_CODE, $_GET["_store"]);
         }
     }
 
@@ -52,11 +57,13 @@ class Customer{
      * @return string
      */
     public function getStoreName(){
-        if (is_null($this->sessions->getVariableSesion(self::TOKEN_SESSION))) {
-            $this->sessions->setVariableSesion(self::STORE_NAME, "scz");
+        $sessionStoreCode = $this->sessions->getVariableSesion(self::STORE_CODE);
+        
+        if (is_null($sessionStoreCode)) {
+            $this->sessions->setVariableSesion(self::STORE_CODE, "scz");
         }
 
-        $City = City::where("code", $this->sessions->getVariableSesion(self::TOKEN_SESSION))->first();
+        $City = City::where("code", $this->sessions->getVariableSesion(self::STORE_CODE))->first();
 
         if (!$City) {
             return "Santa Cruz";
