@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Home|RedLantern')
+@section('title', 'Categoría no encontrada|RedLantern')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset(env('PUBLIC_PATH').'css/red_lantern.css') }}">

@@ -14,13 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('account_login', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('username');
-            $table->longText('password');
-            $table->boolean('status');
+        Schema::create('account_quality_feed', function (Blueprint $table) {
+            $table->decimal('quality', 10, 2);
+
             $table->unsignedBigInteger('id_account')->nullable();
             $table->foreign('id_account')->references('id')->on('account')->onDelete('cascade');
+
+            $table->unsignedBigInteger('id_feed')->nullable();
+            $table->foreign('id_feed')->references('id')->on('feed')->onDelete('cascade');
             
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->nullable();
@@ -34,9 +35,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account_login', function (Blueprint $table) {
+        Schema::dropIfExists('account_quality_feed', function (Blueprint $table) {
             $table->dropConstrainedForeignId('id_account');
+            $table->dropConstrainedForeignId('id_feed');
         });
-        Schema::dropIfExists('account_login');
+        Schema::dropIfExists('account_quality_feed');
     }
 };

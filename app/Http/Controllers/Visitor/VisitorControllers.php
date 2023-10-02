@@ -45,6 +45,24 @@ class VisitorControllers extends Controller
      * @param Request $request
      * @return Response
     */
+    public function Blog(Request $request)
+    {
+        return view('visitor/nosotros/blog');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+    */
+    public function QuienesSomos(Request $request)
+    {
+        return view('visitor/nosotros/somos');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+    */
     public function Seguridad(Request $request)
     {
         return view('visitor/seguridad');

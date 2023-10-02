@@ -14,13 +14,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('account_login', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('username');
-            $table->longText('password');
-            $table->boolean('status');
+        Schema::create('feed_picture', function (Blueprint $table) {
+            $table->integer('sort');
+
             $table->unsignedBigInteger('id_account')->nullable();
             $table->foreign('id_account')->references('id')->on('account')->onDelete('cascade');
+
+            $table->unsignedBigInteger('id_feed')->nullable();
+            $table->foreign('id_feed')->references('id')->on('feed')->onDelete('cascade');
+            
+            $table->unsignedBigInteger('id_picture')->nullable();
+            $table->foreign('id_picture')->references('id')->on('picture')->onDelete('cascade');
             
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->nullable();
@@ -34,9 +38,11 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account_login', function (Blueprint $table) {
+        Schema::dropIfExists('feed_picture', function (Blueprint $table) {
             $table->dropConstrainedForeignId('id_account');
+            $table->dropConstrainedForeignId('id_feed');
+            $table->dropConstrainedForeignId('id_picture');
         });
-        Schema::dropIfExists('account_login');
+        Schema::dropIfExists('feed_picture');
     }
 };

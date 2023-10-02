@@ -10,10 +10,10 @@
                     <h5>Acerca de RedLantern</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a class="link-text" href="/">Quienes somos</a>
+                            <a class="link-text" href="/quienes-somos">Quienes somos</a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-text" href="/docs/5.0/">Blog</a>
+                            <a class="link-text" href="/blog">Blog</a>
                         </li>
                     </ul>
                 </div>

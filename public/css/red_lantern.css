@@ -1,9 +1,9 @@
 .header-red-lantern {
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  top: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  z-index: 1000 !important;
   box-shadow: 0px 0px gray, 0px 5px 0.4em gray;
 }
 .red-lantern-header {
@@ -62,7 +62,7 @@
 }
 .red-lantern-header .red-lantern-nav .menu li a {
   background-color: #ffffff;
-  color: #f988ff;
+  color: #9926e1;
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 25px;
@@ -70,7 +70,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 .red-lantern-header .red-lantern-nav .menu li a:hover {
-  background-color: #f988ff;
+  background-color: #9926e1;
   color: #ffffff;
 }
 .red-lantern-header .red-lantern-nav .menu li .submenu {
@@ -93,6 +93,7 @@
 .red-lantern-header .red-lantern-nav .menu li .submenu .options .option {
   min-width: 220px;
   width: auto;
+  border: solid 1px #9926e1;
 }
 .red-lantern-header .red-lantern-nav .menu .dropdown:hover .submenu {
   display: block;
@@ -109,7 +110,7 @@
 }
 .red-lantern-header .cta-buttons .cta-button {
   background-color: #ffffff;
-  color: #f988ff;
+  color: #9926e1;
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 25px;
@@ -118,6 +119,6 @@
   margin-right: 10px;
 }
 .red-lantern-header .cta-buttons .cta-button:hover {
-  background-color: #f988ff;
+  background-color: #9926e1;
   color: #ffffff;
 }

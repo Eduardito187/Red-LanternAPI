@@ -26,6 +26,8 @@ Route::middleware([MiddlewareVisitor::class])->group(function () {
     Route::get('/confidencialidad', [VisitorControllers::class, 'Confidencialidad'])->name('Confidencialidad');
     Route::get('/seguridad', [VisitorControllers::class, 'Seguridad'])->name('Seguridad');
     Route::get('/category/{url}', [CategoryControllers::class, 'CategoryUrl'])->name('Category');
+    Route::get('/quienes-somos', [VisitorControllers::class, 'QuienesSomos'])->name('QuienesSomos');
+    Route::get('/blog', [VisitorControllers::class, 'Blog'])->name('Blog');
 });
 
 Route::middleware([MiddlewareLogin::class])->group(function () {
